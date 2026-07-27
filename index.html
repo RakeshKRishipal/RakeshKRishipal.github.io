@@ -1,280 +1,976 @@
 <!DOCTYPE html>
-<html> 
-   <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Rakesh Kumar | Mathematics</title>
-   </head>
-   <body>
-      <div class="row">
-  <div class="column">
-    <img align="left" src="rakeshb.jpg" alt="hi" width="175" height="220">   </img>
-       </div>
-</div>
-    <div style = "position:relative; left:100px; top:2px; ">
-   <p class="p-welcome"><b>Dr. R. K. Dhiman  </b></p>
-    <p class="p-welcome"><a href="https://www.researchgate.net/profile/Rakesh-Rishipal-2" target="_blank"> ResearchGate </a> || <a href="https://scholar.google.com/citations?user=bOLISdkAAAAJ&hl=hi" target="_blank"> G000gle Scholar </a></p>
-        <p class="p-welcome"> Assistant Professor, Dept. of Mathematics,</p>
-    <p class="p-welcome">SRM University-AP, Amaravati
-        Guntur District, Andhra Pradesh, 522240, India</p>
-    <p class="p-welcome">Email: rakeshkumar.r@srmap.edu.in, rakesh1729math@gmail.com, +91-7876986007</p>
-   <p class="p-welcome">ORCID: https://orcid.org/0000-0003-3172-4864 </p>
-       <p class="p-welcome">Vidwan-ID: 575709, Socups ID: 58733289100, ResearcherID: ABW-7401-2022 </p>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Rakesh Kumar (R. K. Dhiman) | Mathematics — SRM University-AP</title>
+<meta name="description" content="Rakesh Kumar (Dr. R. K. Dhiman), Assistant Professor of Mathematics, SRM University-AP. Spectral theory, non-self-adjoint operators, bent optical waveguides, applied analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F6FA;
+    --surface:#FFFFFF;
+    --surface-2:#EFF3F9;
+    --navy:#0B2545;
+    --navy-2:#123A66;
+    --text:#1B2333;
+    --muted:#667085;
+    --border:#E4E8F0;
+    --blue:#1D63C9;
+    --blue-light:#E8F0FE;
+    --radius:12px;
+    --shadow:0 1px 2px rgba(16,24,40,.06), 0 2px 8px rgba(16,24,40,.06);
+    color-scheme:light;
+  }
+  html[data-theme="dark"]{
+    --bg:#0B1220;
+    --surface:#111A2C;
+    --surface-2:#16223A;
+    --navy:#060D1A;
+    --navy-2:#0E1B33;
+    --text:#E7EAF1;
+    --muted:#93A0B4;
+    --border:#22314B;
+    --blue:#6EA2F7;
+    --blue-light:#122B4E;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 2px 10px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:'Manrope',system-ui,sans-serif; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    transition:background .2s ease, color .2s ease;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:var(--blue); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px; border-radius:4px;
+  }
+  h1,h2,h3,h4{margin:0; color:var(--text); font-weight:800; letter-spacing:-.01em;}
+  .wrap{max-width:1280px; margin:0 auto; padding:0 24px;}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow);}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:6px;
+  }
+  .section-title{font-size:1.4rem; margin-bottom:18px;}
+  section{padding:36px 0;}
+  .btn{
+    display:inline-flex; align-items:center; gap:7px; font-size:.86rem; font-weight:700;
+    padding:9px 15px; border-radius:9px; border:1px solid var(--border); background:var(--surface); color:var(--text);
+  }
+  .btn:hover{ border-color:var(--blue); color:var(--blue); text-decoration:none; }
+  .btn.primary{ background:var(--navy); color:#fff; border-color:var(--navy); }
+  .btn.primary:hover{ background:var(--navy-2); color:#fff; }
+  .btn svg{width:16px; height:16px; flex:none;}
+  .chip{
+    display:inline-flex; align-items:center; font-size:.76rem; font-weight:700; padding:4px 10px;
+    border-radius:100px; background:var(--blue-light); color:var(--blue);
+  }
+  .view-all{font-size:.86rem; font-weight:700;}
+  svg.icon{width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+
+  /* ---------------- NAVBAR ---------------- */
+  header.navbar{
+    position:sticky; top:0; z-index:50; background:var(--navy); color:#fff;
+  }
+  .navbar-inner{
+    max-width:1280px; margin:0 auto; padding:0 24px; height:60px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .brand{ color:#fff; font-weight:800; font-size:1.02rem; white-space:nowrap; }
+  .brand:hover{ text-decoration:none; }
+  nav.main-nav{ display:flex; gap:4px; overflow-x:auto; scrollbar-width:none; }
+  nav.main-nav::-webkit-scrollbar{ display:none; }
+  nav.main-nav a{
+    color:#C9D6EA; font-size:.86rem; font-weight:600; padding:10px 12px; white-space:nowrap; border-bottom:2px solid transparent;
+  }
+  nav.main-nav a:hover{ color:#fff; text-decoration:none; }
+  nav.main-nav a.active{ color:#fff; border-bottom-color:var(--blue); }
+  .nav-tools{ display:flex; align-items:center; gap:6px; flex:none; }
+  .icon-btn{
+    width:34px; height:34px; border-radius:8px; border:1px solid transparent; background:transparent; color:#C9D6EA;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+  }
+  .icon-btn:hover{ background:rgba(255,255,255,.1); color:#fff; }
+  .search-box{ display:none; align-items:center; gap:6px; }
+  .search-box.open{ display:flex; }
+  .search-box input{
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); color:#fff; border-radius:8px;
+    padding:7px 10px; font-size:.84rem; width:170px; font-family:inherit;
+  }
+  .search-box input::placeholder{ color:#9FB1CC; }
+
+  /* ---------------- HERO ---------------- */
+  .hero-grid{
+    display:grid; grid-template-columns:1.5fr 1fr; gap:22px; padding-top:32px;
+  }
+  @media (max-width:940px){ .hero-grid{grid-template-columns:1fr;} }
+
+  .profile-card{ padding:28px; display:flex; gap:24px; }
+  @media (max-width:640px){ .profile-card{flex-direction:column;} }
+  .portrait{ width:130px; height:160px; object-fit:cover; border-radius:9px; border:1px solid var(--border); flex:none; }
+  .profile-name{ font-size:1.7rem; margin-bottom:4px; }
+  .profile-role{ color:var(--blue); font-weight:700; font-size:1rem; margin-bottom:6px; }
+  .profile-affil{ color:var(--muted); font-size:.92rem; margin-bottom:2px; }
+  .profile-tags{ margin-top:12px; color:var(--muted); font-size:.88rem; display:flex; flex-wrap:wrap; gap:6px 10px; }
+  .profile-tags span:not(:last-child)::after{ content:"|"; margin-left:10px; color:var(--border); }
+  .profile-btns{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+
+  .updates-card{ padding:22px 24px; display:flex; flex-direction:column; }
+  .updates-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  .updates-head h3{ display:flex; align-items:center; gap:8px; font-size:1.02rem; }
+  .updates-head svg{ color:var(--blue); }
+  .update-item{ display:flex; gap:12px; padding:11px 0; border-top:1px solid var(--border); }
+  .update-item:first-of-type{ border-top:none; }
+  .update-badge{
+    flex:none; align-self:flex-start; font-family:'IBM Plex Mono',monospace; font-size:.66rem; font-weight:700;
+    padding:4px 8px; border-radius:6px; background:var(--surface-2); color:var(--muted); text-transform:uppercase; letter-spacing:.04em;
+  }
+  .update-text{ font-size:.87rem; color:var(--text); }
+  .update-text .sub{ color:var(--muted); font-size:.82rem; }
+
+  /* ---------------- RESEARCH INTERESTS ---------------- */
+  .interest-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+  }
+  @media (max-width:820px){ .interest-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .interest-grid{grid-template-columns:1fr;} }
+  .interest-card{
+    display:flex; align-items:center; gap:14px; padding:18px; font-weight:700; font-size:.92rem;
+  }
+  .interest-icon{
+    width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex:none;
+    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:1.05rem;
+  }
+
+  /* ---------------- PUBLICATIONS (featured strip) ---------------- */
+  .pub-scroll{ display:flex; gap:14px; overflow-x:auto; padding-bottom:6px; scroll-snap-type:x proximity; }
+  .pub-card{
+    flex:none; width:300px; padding:18px; scroll-snap-align:start; display:flex; flex-direction:column;
+  }
+  .pub-year{ margin-bottom:10px; }
+  .pub-title{ font-size:.98rem; font-weight:700; margin-bottom:8px; line-height:1.4; }
+  .pub-journal{ font-style:italic; color:var(--muted); font-size:.83rem; margin-bottom:14px; flex:1; }
+  .pub-actions{ display:flex; flex-wrap:wrap; gap:6px; }
+  .pub-actions .btn{ padding:6px 11px; font-size:.78rem; }
+
+  /* full publications list */
+  .pub-list{ list-style:none; margin:0; padding:0; }
+  .pub-full{ display:grid; grid-template-columns:44px 1fr; gap:16px; padding:18px 0; border-top:1px solid var(--border); }
+  .pub-full:last-child{ padding-bottom:0; }
+  .pub-full .num{ font-family:'IBM Plex Mono',monospace; color:var(--blue); font-size:.86rem; padding-top:2px; }
+  .pub-full .title{ font-weight:700; margin-bottom:4px; }
+  .pub-full .meta{ font-size:.87rem; color:var(--muted); margin-bottom:8px; }
+  .pub-full .meta b{ color:var(--text); }
+  .pub-full.is-hidden{ display:none; }
+
+  /* ---------------- 4-col grid: projects / teaching / notes / glance ---------------- */
+  .quad-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  @media (max-width:980px){ .quad-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .quad-grid{grid-template-columns:1fr;} }
+  .quad-card{ padding:20px; display:flex; flex-direction:column; }
+  .quad-card h3{ font-size:.98rem; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+  .quad-card h3 svg{ color:var(--blue); }
+  .quad-list{ list-style:none; margin:0; padding:0; flex:1; }
+  .quad-list li{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    padding:9px 0; border-top:1px solid var(--border); font-size:.87rem;
+  }
+  .quad-list li:first-child{ border-top:none; }
+  .quad-list a{ color:var(--text); font-weight:600; }
+  .quad-list a:hover{ color:var(--blue); }
+  .quad-list svg{ color:var(--muted); flex:none; width:15px; height:15px; }
+  .quad-foot{ margin-top:12px; font-size:.83rem; font-weight:700; }
+
+  .glance-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px 10px; }
+  .glance-num{ font-size:1.5rem; font-weight:800; color:var(--navy); }
+  html[data-theme="dark"] .glance-num{ color:#fff; }
+  .glance-label{ font-size:.76rem; color:var(--muted); }
+
+  /* ---------------- timeline (conferences) ---------------- */
+  .timeline{ list-style:none; margin:0; padding:0; }
+  .tl-item{ position:relative; padding:0 0 24px 26px; border-left:1px solid var(--border); margin-left:4px; }
+  .tl-item:last-child{ border-left-color:transparent; padding-bottom:0; }
+  .tl-item::before{
+    content:""; position:absolute; left:-4.5px; top:5px; width:8px; height:8px;
+    border-radius:50%; background:var(--blue); border:2px solid var(--bg);
+  }
+  .tl-date{ font-family:'IBM Plex Mono',monospace; font-size:.74rem; color:var(--muted); margin-bottom:2px; }
+  .tl-title{ font-weight:700; font-size:.96rem; }
+  .tl-place{ font-size:.85rem; color:var(--muted); }
+  .tl-talk{ font-size:.85rem; color:var(--text); margin-top:6px; padding:8px 12px; background:var(--surface-2); border-radius:8px; }
+  .badge-mini{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:.64rem; font-weight:700;
+    padding:2px 8px; border-radius:100px; margin-left:6px; vertical-align:middle;
+  }
+  .badge-award{ color:#B45309; background:#FEF3C7; }
+  html[data-theme="dark"] .badge-award{ color:#FCD34D; background:#3A2E0F; }
+
+  .award-list{ list-style:none; margin:0; padding:0; display:grid; gap:0; }
+  .award-list li{ display:flex; gap:14px; align-items:baseline; padding:13px 0; border-top:1px solid var(--border); font-size:.93rem; }
+  .award-list li:first-child{ border-top:none; }
+  .award-list .yr{ font-family:'IBM Plex Mono',monospace; color:var(--blue); font-size:.82rem; min-width:2.6em; flex:none; }
+
+  /* ---------------- gallery ---------------- */
+  .gallery-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:14px; }
+  .gallery-grid img{ width:100%; height:130px; object-fit:cover; border-radius:9px; border:1px solid var(--border); display:block; }
+  .gallery-grid figcaption{ font-size:.72rem; color:var(--muted); margin-top:6px; font-family:'IBM Plex Mono',monospace; }
+  .pdf-tile{ height:130px; border:1px dashed var(--border); border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:.78rem; color:var(--blue); font-weight:700; }
+
+  /* ---------------- resources accordion ---------------- */
+  details.res{ border-top:1px solid var(--border); }
+  details.res:first-of-type{ border-top:none; }
+  details.res summary{
+    cursor:pointer; padding:16px 2px; font-weight:700; font-size:1rem; list-style:none;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  details.res summary::-webkit-details-marker{ display:none; }
+  details.res summary::after{ content:"+"; color:var(--blue); font-family:'IBM Plex Mono',monospace; font-size:1.1rem; }
+  details.res[open] summary::after{ content:"–"; }
+  .res-body{ padding:0 2px 20px; font-size:.9rem; color:var(--muted); }
+  .link-cluster{ display:flex; flex-wrap:wrap; gap:8px 6px; }
+  .link-cluster a{
+    font-size:.83rem; color:var(--text); border:1px solid var(--border); border-radius:100px; padding:5px 12px;
+  }
+  .link-cluster a:hover{ color:var(--blue); border-color:var(--blue); text-decoration:none; }
+  .quote{ font-style:italic; color:var(--text); border-left:3px solid var(--blue); padding-left:14px; margin:12px 0; }
+
+  /* ---------------- footer ---------------- */
+  footer.site-footer{ background:var(--navy); color:#C9D6EA; margin-top:20px; }
+  .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr 1.3fr; gap:26px; padding:44px 0 26px; }
+  @media (max-width:820px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .footer-grid{grid-template-columns:1fr;} }
+  footer h4{ color:#fff; font-size:.86rem; text-transform:uppercase; letter-spacing:.06em; margin-bottom:14px; }
+  footer .f-line{ display:flex; align-items:flex-start; gap:9px; font-size:.87rem; margin-bottom:9px; color:#C9D6EA; }
+  footer .f-line svg{ flex:none; margin-top:3px; color:#8FA6CC; }
+  footer ul{ list-style:none; margin:0; padding:0; }
+  footer ul li{ margin-bottom:9px; font-size:.87rem; }
+  footer a{ color:#C9D6EA; }
+  footer a:hover{ color:#fff; }
+  .social-row{ display:flex; gap:10px; }
+  .social-row a{
+    width:36px; height:36px; border-radius:8px; background:rgba(255,255,255,.08);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.78rem; color:#fff;
+  }
+  .social-row a:hover{ background:rgba(255,255,255,.18); text-decoration:none; }
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12); padding:16px 0 26px;
+    display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; font-size:.78rem; color:#8FA6CC;
+  }
+  .back-to-top{
+    position:fixed; right:20px; bottom:20px; width:42px; height:42px; border-radius:50%;
+    background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center;
+    box-shadow:var(--shadow); z-index:40;
+  }
+  .back-to-top:hover{ background:var(--navy-2); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#home">Dr. Rakesh Kumar</a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#software">Software</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <div class="search-box" id="searchBox">
+        <input type="text" id="searchInput" placeholder="Search publications…" aria-label="Search publications">
+      </div>
+      <button class="icon-btn" id="searchToggle" aria-label="Toggle search">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon" id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
     </div>
-    <br> <p>
+  </div>
+</header>
 
-    <hr> 
-   
-<b>Research </b> (EUREKA) 
-       <button> <a href="https://github.com/bitzhangcy/Neural-PDE-Solver?tab=readme-ov-file" target="_blank">
-            Neural-PDE-Solver</a></button> 
-       <button> <a href="https://github.com/PredictiveIntelligenceLab/Physics-informed-DeepONets" target="_blank">
-            Physics-informed-DeepONet</a></button> 
-       <button> <a href="https://drive.google.com/file/d/17-FaLtNK9akUM8SWaLBepvI5Kk5pMlhy/view?usp=sharing" target="_blank">
-            Curriculum vitae</a></button> 
-           <button> <a href="https://drive.google.com/file/d/17-FaLtNK9akUM8SWaLBepvI5Kk5pMlhy/view?usp=sharing" target="_blank"> Waves </a></button>
-    <ul>
-            
-         </li>
-       <li><b>Current Research work:</b> ...
-        </li>
-        <li> <b>Areas:</b> Applied Analysis ---> PDE, Fluid Dynamics, Thermodynamics, Machine Learning, FreeFEM++
-  </li>
-        <li><b>Ph.D. Thesis Title:</b> Non-self-adjoint Eigenvalue Problem for Optical Bent Waveguides (IIT Jodhpur, Rajasthan)
-        </li>
-        <li> <b>Programming:</b> FreeFEM++, MATLAB, C++, Maple, Python
-         
-    </ul>
-     <hr> 
-    <b>Research Work</b><br><br>
-   (1) <b>Rakesh Kumar</b> and Kirankumar R. Hiremath, <i>Non-self-adjointness of bent optical waveguide eigenvalue problem</i>, 
-   <i>Journal of Mathematical Analysis and Applications</i>, Elsevier,  Vol: 512(1), pg. 126024-126034 (2022) <a href="https://www.researchgate.net/publication/358002765_Non-self-adjointness_of_bent_optical_waveguide_eigenvalue_problem" target="_blank">
-            <b>PDF</b></a>
-   
-   <br>(2) <b>Rakesh Kumar</b> and Kirankumar R. Hiremath, <i>Mathematical analysis of bent optical waveguide eigenvalue problem</i>, Journal of Physics A: Mathematical and Theoretical, 57 (34),2024 <a href="https://iopscience.iop.org/article/10.1088/1751-8121/ad6aaf" target="_blank">
-            <b>PDF</b> </a>
-   
-   <br>(3) <b>Rakesh Kumar</b>, Kirankumar R. Hiremath, and Sergio Manzetti, <i>A Primer on Eigenvalue Problems of Non-self-adjoint Operators</i>, Analysis and Mathematical Physics, Springer, 14(21) 
-    2024 <a href="https://link.springer.com/article/10.1007/s13324-024-00881-7#:~:text=Typical%20examples%20of%20non%2Dself,circumstances%2C%20results%20in%20solutions%20with" target="_blank">
-            <b>PDF</b> </a>
-    
-   <br>(4) S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal, and Kirankumar R. Hiremath, <i>Mathematical Modelling of a Ring Resonator Based Refractive Index
-Sensor for Cancer Detection Applications</i>, Optical and Quantum Electronics (2023) <a href="https://link.springer.com/article/10.1007/s11082-023-05278-7" target="_blank">
-            <b>PDF</b> </a>
-   
-    <br>(5) S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal, and Kirankumar R. Hiremath, <i> CMT-based Fast Analytical Model of a Ring Resonator Refractive Index Biosensor</i>, Optica Sensing Congress (2023)
-   <a href="https://opg.optica.org/abstract.cfm?uri=Sensors-2023-STu5C.6" target="_blank"><b>PDF</b></a>
+<div class="wrap">
 
-       <br>(6) S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal, and Kirankumar R. Hiremath, <i>Modeling and Enhancing the Sensing Performance of Silicon Nitride Slotted Ring Resonator based Refractive Index Sensor </i>, 
-    Applied Optics, Optica Publishing Group, 2025  <a href="https://opg.optica.org/ao/abstract.cfm?doi=10.1364/AO.563858" target="_blank"><b>PDF</b></a>
+  <!-- ============ HOME / HERO ============ -->
+  <section id="home">
+    <div class="hero-grid">
+      <div class="profile-card card">
+        <img class="portrait" src="rakeshb.jpg" alt="Portrait of Rakesh Kumar (Dr. R. K. Dhiman)">
+        <div>
+          <h1 class="profile-name">Dr. R. K. Dhiman</h1>
+          <div class="profile-role">Assistant Professor</div>
+          <div class="profile-affil">Department of Mathematics</div>
+          <div class="profile-affil">SRM University-AP, Amaravati, Andhra Pradesh, India</div>
+          <div class="profile-tags">
+            <span>Applied Analysis</span><span>Spectral Theory</span><span>PDE</span><span>Fluid Dynamics</span><span>Thermodynamics</span><span>Machine Learning</span>
+          </div>
+          <div class="profile-btns">
+            <a class="btn primary" href="https://drive.google.com/file/d/17-FaLtNK9akUM8SWaLBepvI5Kk5pMlhy/view?usp=sharing" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>CV
+            </a>
+            <a class="btn" href="https://scholar.google.com/citations?user=bOLISdkAAAAJ&hl=hi" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M22 10L12 4 2 10l10 6 10-6z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Google Scholar
+            </a>
+            <a class="btn" href="https://www.researchgate.net/profile/Rakesh-Rishipal-2" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 16V9M8 9c0-1.1.9-2 2-2s2 .9 2 2-1 1.5-2 2M16 16v-4.5c0-1-.8-1.8-1.8-1.8S12.5 10.5 12.5 11.5V16"/></svg>ResearchGate
+            </a>
+            <a class="btn" href="https://orcid.org/0000-0003-3172-4864" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 8v8M8 8h.01M12 8v8M12 8h3a3 3 0 0 1 0 8h-3"/></svg>ORCID
+            </a>
+            <a class="btn" href="mailto:rakeshkumar.r@srmap.edu.in">
+              <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <br>(7) S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal, and Kirankumar R. Hiremath, <i>Coupled mode theory-based analytical model of a ring resonator refractive index sensor incorporating bending loss and dispersion </i>, 
-    Photonics and Nanostructures-Fundamentals and Applications, 62, 101308, 2024  <a href="https://www.sciencedirect.com/science/article/pii/S156944102400083X" target="_blank"><b>PDF</b></a>
-      
-         <br>(8) <b>Rakesh Kumar</b>, Abhishek Nimmwat, and Kushal Sharma, <i>Unsteady free convection Williamson nano fluid over a heated permeable stretching sheet under the effects of inclined magnetic field and thermal radiation</i>, 
-   (Physics of Fluids, 2025, submitted)
+      <div class="updates-card card">
+        <div class="updates-head">
+          <h3><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a2 2 0 0 1-3.2 2.4L6 15"/></svg>Updates</h3>
+          <a class="view-all" href="#publications">View all →</a>
+        </div>
+        <div class="update-item">
+          <span class="update-badge">Publication</span>
+          <div class="update-text">"Analysis and Computation of Turning Points in Optical Straight and Bent Waveguides" accepted<div class="sub">Mathematics and Computers in Simulation, Elsevier</div></div>
+        </div>
+        <div class="update-item">
+          <span class="update-badge">Conference</span>
+          <div class="update-text">Talk on turning points in bent optical waveguide models<div class="sub">ICNACT-2024, India</div></div>
+        </div>
+        <div class="update-item">
+          <span class="update-badge">Teaching</span>
+          <div class="update-text">Lecture notes posted for Discrete Mathematics and Nonlinear Dynamics<div class="sub">See Teaching section</div></div>
+        </div>
+        <div class="update-item">
+          <span class="update-badge">Award</span>
+          <div class="update-text">SERB India International Travel Grants<div class="sub">IWOTA Finland (2023) &amp; BIRS Canada (2022)</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-       <br>(9) S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal, and Kirankumar R. Hiremath, <i>CMT based fast model of label-free disk resonator sensor for HSV detection</i>, (2025) (submitted)
+  <!-- ============ RESEARCH INTERESTS ============ -->
+  <section id="research">
+    <h2 class="section-title">Research Interests</h2>
+    <div class="interest-grid">
+      <div class="interest-card card">
+        <div class="interest-icon" style="background:#E7EFFC;color:#2E6FD9;">∂/∂t</div>
+        Non-self-adjoint Spectral Theory
+      </div>
+      <div class="interest-card card">
+        <div class="interest-icon" style="background:#E4F6F4;color:#0E9488;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M2 12c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M2 18c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/></svg>
+        </div>
+        Fluid Dynamics &amp; Thermodynamics
+      </div>
+      <div class="interest-card card">
+        <div class="interest-icon" style="background:#FCEEE4;color:#C2410C;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18.7 8 13 13.7l-3-3L4.3 16.4"/></svg>
+        </div>
+        PDE &amp; Applied Analysis
+      </div>
+      <div class="interest-card card">
+        <div class="interest-icon" style="background:#F1E9FC;color:#7C3AED;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M2 12c2-4 4-4 6 0s4 4 6 0 4-6 8-6"/></svg>
+        </div>
+        Bent Optical Waveguides
+      </div>
+      <div class="interest-card card">
+        <div class="interest-icon" style="background:#E5F7EA;color:#16A34A;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08A3 3 0 0 1 3 11a3 3 0 0 1 .34-5.5 2.5 2.5 0 0 1 4.32-2.5A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08A3 3 0 0 0 21 11a3 3 0 0 0-.34-5.5 2.5 2.5 0 0 0-4.32-2.5A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+        </div>
+        Machine Learning for PDEs
+      </div>
+      <div class="interest-card card">
+        <div class="interest-icon" style="background:#FCE7F1;color:#DB2777;">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+        </div>
+        Scientific Computing
+      </div>
+    </div>
+  </section>
 
-       <br>(10) <b>Rakesh Kumar</b>, <i>  Analysis and Computation of Turning Points in Optical Straight and Bent Waveguides</i>, (Mathematics and Computers in
-Simulation, Elsevier, 2025)
-   
-   <br>(11) Manish Kumar, <b>Rakesh Kumar</b> and Kushal Sharma, <i>Extended Inequalities Between Eigenvalues and Diagonal Entries of Hermitian Matrices and Block Hermitian Matrices</i>, (Indian Journal of Pure and Applied Mathematics, 2025, submitted) 
-    
-   <hr> 
-    <b>Conferences</b>
-    <ul>
-      <li> International Conference on Non-linear Analysis and Computational Techniques (ICNACT-2024), India, 8 - 10 August 2024 (<mark class="red">Coming</mark>)
-               <ul>
-                  
-                  <li><a href="https://vitbhopal.ac.in/icnact-2024/" target="_blank">
-                    Talk Title:</a> Analysis and computations of turning points in bent optical waveguide model </li>
-             </ul>
-         
-       <li> CIRM International <a href="http://nsa.fjfi.cvut.cz/CIRM2024/" target="_blank">
-            conference</a> on Mathematical aspects of the physics with non-self-adjoint operators Marseille, 3 - 7 June 2024, France. (<mark class="red">Coming</mark>)
-          
-          <li> Spectral theory <a href="https://heilbronn.ac.uk/2023/01/20/spectral-theory-workshop/" target="_blank">
-            workshop</a> School of Mathematics, University of Bristol, 4 – 6 September 2023, U.K. (<mark class="red">Coming</mark>)
-            
-          
-          <li>  34th, International <a href="https://www.helsinki.fi/en/conferences/iwota2023" target="_blank">
-            Workshop</a> on Operator Theory and its Applications (IWOTA), University of Helsinki, July 31 - August 4, 2023, Finland.  
-             
-             <li> <a href="https://events.math.unipd.it/minicorsi/" target="_blank"> Mini-courses </a> in Mathematical Analysis, Edificio Paolotti, Via Paolotti 2/a, Padova, June 19 - 23, 2023, Italy. 
-       
-          <li> National Symposium on Mathematics and Applications <a href="https://math.iitm.ac.in/public_html/nsma/index.php?name=Registration" target="_blank">
-            (NSMA)</a>, Department of Mathematics, Indian Institute of Technology Madras,
-          India, December 22, 2022. 
-          <ul>
-                 <li><a href="https://www.birs.ca/workshops/2022/22w5115/files/Rakesh%20Kumar/RakeshKumarBIRSWorkshopPresentation.pdf" target="_blank">
-                    Talk Title:</a> Analysis of non-self-adjoint bent waveguide eigenvalue problem </li>
+  <!-- ============ FEATURED PUBLICATIONS ============ -->
+  <section id="featured-pubs">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;">
+      <h2 class="section-title">Featured Publications</h2>
+      <a class="view-all" href="#publications">View all publications →</a>
+    </div>
+    <div class="pub-scroll">
+      <div class="pub-card card">
+        <span class="chip pub-year">2025</span>
+        <div class="pub-title">Analysis and Computation of Turning Points in Optical Straight and Bent Waveguides</div>
+        <div class="pub-journal">Mathematics and Computers in Simulation, Elsevier</div>
+        <div class="pub-actions"><span class="btn" style="opacity:.6;cursor:default;">In press</span></div>
+      </div>
+      <div class="pub-card card">
+        <span class="chip pub-year">2024</span>
+        <div class="pub-title">A Primer on Eigenvalue Problems of Non-self-adjoint Operators</div>
+        <div class="pub-journal">Analysis and Mathematical Physics, Springer</div>
+        <div class="pub-actions">
+          <a class="btn" href="https://link.springer.com/article/10.1007/s13324-024-00881-7" target="_blank" rel="noopener">PDF</a>
+          <button class="btn cite-btn" data-cite="primer">Cite</button>
+        </div>
+      </div>
+      <div class="pub-card card">
+        <span class="chip pub-year">2024</span>
+        <div class="pub-title">Mathematical analysis of bent optical waveguide eigenvalue problem</div>
+        <div class="pub-journal">Journal of Physics A: Mathematical and Theoretical</div>
+        <div class="pub-actions">
+          <a class="btn" href="https://iopscience.iop.org/article/10.1088/1751-8121/ad6aaf" target="_blank" rel="noopener">PDF</a>
+          <button class="btn cite-btn" data-cite="jpa">Cite</button>
+        </div>
+      </div>
+      <div class="pub-card card">
+        <span class="chip pub-year">2022</span>
+        <div class="pub-title">Non-self-adjointness of bent optical waveguide eigenvalue problem</div>
+        <div class="pub-journal">Journal of Mathematical Analysis and Applications, Elsevier</div>
+        <div class="pub-actions">
+          <a class="btn" href="https://www.researchgate.net/publication/358002765_Non-self-adjointness_of_bent_optical_waveguide_eigenvalue_problem" target="_blank" rel="noopener">PDF</a>
+          <button class="btn cite-btn" data-cite="jmaa">Cite</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            </ul>
-             <li> International <a href="https://www.nitt.edu/home/academics/departments/maths/events/icmaa2022/" target="_blank">
-            Conference</a> on Mathematical Analysis and Applications (ICMAA), Department of Mathematics, National Institute of Technology, Tiruchirappalli,
-          India, December 15-17, 2022. 
-          <ul>
-                 <li><a href="   " target="_blank">
-                    Talk Title:</a> Analysis of non-self-adjoint bent waveguide eigenvalue problem </li>
-
-            </ul>
-        <li> <a href="https://www.birs.ca/events/2022/5-day-workshops/22w5115" target="_blank">
-            BIRS</a> workshop on Mathematical aspects of the physics with non-self-adjoint operators Banff, Canada, 10 - 15 July 2022.  
-
-            <ul>
-                 <li><a href="https://www.birs.ca/workshops/2022/22w5115/files/Rakesh%20Kumar/RakeshKumarBIRSWorkshopPresentation.pdf" target="_blank">
-                    Talk Title:</a> Mathematical analysis of non-self-adjoint eigenvalue problem for the bent waveguides </li>
-
-            </ul>
-         </li>
-        <li> <a href="https://opc.iitd.ac.in/" target="_blank">
-            Optics and Photonics Centre,</a> IIT Delhi Summer School on Optics and Photonics (Jointly organized with National Academy of Sciences, India (NASI)-Delhi Chapter) June 6-June 24, 2022
-            <ul>
-                <li>Talk Title: Mathematical aspects of  the bent waveguides</li>
-
-           </ul>
-           <li> <a href="https://www.mathematik.tu-dortmund.de/lsix/events/WPSG21/" target="_blank">
-            Workshop</a> on Perturbation of Spectral Bands and Gaps, 26 -30 July 2021, the Technical University of Dortmund (virtual), Germany
-           
-           <li> International <a href="https://www.lancaster.ac.uk/maths/iwotauk2021/" target="_blank">
-            Workshop</a> on Operator Theory and its Applications (IWOTA, virtual), Monday 16th - Friday 20th August 2021, Lancaster University, U.K 
-           
-        <li> International Conference on Advanced Research in Applied Sciences (virtual), 25 September 2021  Kurukshetra University, Kurukshetra, India (Got best presentation award) 
-        </li>
-        <li> International <a href="https://iitg.ac.in/maths/ext/adena2020/" target="_blank">
-            Conference</a> on Advances in Differential Equations and Numerical Analysis (ADENA) (virtual), October 12-15, 2020, IIT Guwahati, India </li>
-            <ul>
-                <li>Talk Title: Mathematical aspects of  Non-self-adjoint bent waveguide problem</li>
-
-           </ul>
-    </ul>
-    <hr> 
-   
-    <b>Awards</b>
-    <ul>
-       <li> International Travel Grant SERB India for Visit to IWOTA Workshop, Finland, 2023
-        <li> International Travel Grant SERB India for Visit to BIRS Workshop, Canada, 2022
-            <li> CSIR National Eligibility Test, June and December 2017
- <li> Best Presentation in Conference 2021
-            </li>
-           
+  <!-- ============ QUAD GRID: projects / teaching / notes / glance ============ -->
+  <section id="teaching">
+    <div class="quad-grid">
+      <div class="quad-card card">
+        <h3><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Research Projects</h3>
+        <ul class="quad-list">
+          <li><a href="https://github.com/PredictiveIntelligenceLab/Physics-informed-DeepONets" target="_blank" rel="noopener">Physics-informed DeepONets</a><svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></li>
+          <li><a href="https://github.com/bitzhangcy/Neural-PDE-Solver?tab=readme-ov-file" target="_blank" rel="noopener">Neural PDE Solver</a><svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></li>
+          <li><span style="color:var(--muted);">Current research — update in progress</span></li>
         </ul>
+      </div>
 
-        <hr> 
-   
-<b>Lecture Notes </b>
-      </li>
-       <li><b>Nonlinear Dyanmics:</b>
-       <button> <a href="https://drive.google.com/file/d/1Hka0sec2R4l5To2YGNlc74a9t3qPs-U6/view?usp=sharing" target="_blank">
-            L3DS</a></button> 
-       <li><b>Discrete Mathematics:</b>
-       <button> <a href="https://drive.google.com/file/d/1Hy7fEQ9xYuatEFe-bfBpPDA4lwP6L2Mr/view" target="_blank">
-            U1</a></button> 
-    <ul>
-    <hr> 
-   <b>Research collaborators:</b><br>
-   <a href="https://nms.kcl.ac.uk/brian.davies/web_page/printmaster.pdf" target="_blank">.</a>
-              
+      <div class="quad-card card">
+        <h3><svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Teaching</h3>
+        <ul class="quad-list">
+          <li><a href="#lecture-notes">Discrete Mathematics</a></li>
+          <li><a href="#lecture-notes">Nonlinear Dynamics</a></li>
+        </ul>
+        <div class="quad-foot"><a href="#lecture-notes">View lecture notes →</a></div>
+      </div>
 
-    <hr> 
-   
-    <b>Imporatant Web-links</b>
-    <ul>
-        <li> Spectral theory workshop and conference <a href="https://spectraltheory.wordpress.com/conferences-on-spectral-theory/" target="_blank">
-            click-1</a>, <a href="https://anadel.math.cnrs.fr/members/ioana/talks/" target="_blank">
-                click-2</a>. || Maths-India Google Group's <a href="https://maths-india.notion.site/" target="_blank">
-            Website</a> 
-            
-        <li> Non-self-adjoint operators open problems <a href="http://nsa.fjfi.cvut.cz/" target="_blank">
-            click</a>
-    <li> UK Spectral Theory Network <a href="https://sites.google.com/view/uk-st/members" target="_blank">
-            click</a>
-           
-        <li> <a href="https://conference-service.com/conferences/mathematics.html" target="_blank">
-            Conferences-1</a>||<a href=" http://www.mathnet.ru/php/conference.phtml?option_lang=eng" target="_blank">
-            Conferences-2</a>
-        <li> <a href="https://www.mathjobs.org/" target="_blank">
-            Math Jobs</a> || <a href="https://netlib.org/na-digest-html/" target="_blank">
-            NA-Digest</a> || <a href="https://mathhire.org/" target="_blank">M</a>
+      <div class="quad-card card" id="lecture-notes">
+        <h3><svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Lecture Notes</h3>
+        <ul class="quad-list">
+          <li><a href="https://drive.google.com/file/d/1Hy7fEQ9xYuatEFe-bfBpPDA4lwP6L2Mr/view" target="_blank" rel="noopener">Discrete Mathematics</a><svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></li>
+          <li><a href="https://drive.google.com/file/d/1Hka0sec2R4l5To2YGNlc74a9t3qPs-U6/view?usp=sharing" target="_blank" rel="noopener">Nonlinear Dynamics</a><svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></li>
+        </ul>
+      </div>
 
-         <li>  International Association of Mathematical <a href="http://www.iamp.org/page.php?page=page_seminar" target="_blank">Physics</a>
-        <li>  <a href="https://researchseminars.org/" target="_blank">Research Seminar</a> || <a href="https://drive.google.com/file/d/1d2In1IRCaJ3fSrDrONbdJyw-gAS8OmYV/view?usp=sharing" target="_blank"> Important Booklet</a>
-    <li>  Euler International Mathematical <a href="http://www.pdmi.ras.ru/EIMI/" target="_blank">Institute </a> 
-        <li>Challenge of Spectral Theory of Non-self-adjoint <a href="https://sites.google.com/view/lms-jrg-nsa/" target="_blank">Operator </a> 
-    </ul> 
-    <hr> 
-   <b>Millennium Problems</b> <a href="https://www.cantorsparadise.com/the-riemann-hypothesis-explained-fa01c1f75d3f" target="_blank">The Riemann Hypothesis</a> 
-   <hr> 
-   
-    <b>Blogs</b>  <a href="https://unbiasedrakesh.blogspot.com/" target="_blank">Let's Read </a> / <a href="https://www.imsc.res.in/~nbhm/qp/" target="_blank">NBHM Question Paper</a>
-    / <a href="https://wmich.edu/mathclub/files/GR0568.pdf" target="_blank">GRE Math</a>/ <a href="https://csclub.uwaterloo.ca/~pbarfuss/Paul%20R.%20Halmos%20-%20A%20Hilbert%20Space%20Problem%20Book%20(1982)%20%5B978-1-4684-9330-6%5D.pdf" target="_blank">A Hilbert Space Problem Book</a>
-      / <a href="https://planetmath.org/msc.html" target="_blank">Planet Math</a>  / <a href="https://pkalika.in/tag/csir-net-question-papers/" target="_blank">CSIR 1</a> 
-        <hr> 
-      / <a href="https://employmentnews.gov.in/NewEmp/Home.aspx" target="_blank">Employment News</a>
-      / <a href="https://www.ncs.gov.in/" target="_blank">NCS</a>
-      / <a href="https://upsc.gov.in/" target="_blank">UPSC</a>
-       / <a href="https://academicjobsindia.com/lander" target="_blank">Academic Jobs India</a>
- / <a href="http://nitcouncil.org.in/index.php/site/console/siteVisitNIT" target="_blank">NIT</a>
-      / <a href="https://www.ugc.gov.in/" target="_blank">UGC</a>
-      / <a href="https://www.sarkari-naukri.in/" target="_blank">Sarkari Naukari</a>
-       / <a href="https://pkalika.in/2023/04/26/csir-net-previous-yr-que-papers-collection/" target="_blank">P Kalika</a>
-      / <a href="https://ndl.iitkgp.ac.in/" target="_blank">National Digital Library of India</a>
-   / <a href="https://curec.samarth.ac.in/index.php/search/site/index" target="_blank">eGov</a> / <a href="https://www.iitsystem.ac.in/facultyrecruitment" target="_blank">Council of IIT</a>
-     / <a href="https://prism.serbonline.in/ResearchSupport" target="_blank">SERB</a>
-      <hr> 
-   
-    <b>Zero Waste Life</b> <br>I started Zero Wasted Life in June 2022. I am motivated by this <a href="https://www.youtube.com/watch?v=pF72px2R3Hg&t=305s" target="_blank">
-        video</a>. Zero waste does not mean you will not use plastic; it also means you will not waste food, water, light, paper, and other resources. Everyone should get started. 
+      <div class="quad-card card">
+        <h3><svg class="icon" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>At a Glance</h3>
+        <div class="glance-grid">
+          <div><div class="glance-num">11</div><div class="glance-label">Publications</div></div>
+          <div><div class="glance-num">13</div><div class="glance-label">Conferences</div></div>
+          <div><div class="glance-num">6</div><div class="glance-label">Invited/Contributed Talks</div></div>
+          <div><div class="glance-num">4</div><div class="glance-label">Awards &amp; Grants</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FULL PUBLICATIONS LIST ============ -->
+  <section id="publications">
+    <h2 class="section-title">All Publications</h2>
+    <div class="card" style="padding:8px 24px;">
+      <ol class="pub-list">
+        <li class="pub-full">
+          <span class="num">01</span>
+          <div>
+            <div class="title">Non-self-adjointness of bent optical waveguide eigenvalue problem</div>
+            <div class="meta"><b>Rakesh Kumar</b> &amp; Kirankumar R. Hiremath — <i>Journal of Mathematical Analysis and Applications</i>, Elsevier, Vol. 512(1), pg. 126024–126034 · 2022</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://www.researchgate.net/publication/358002765_Non-self-adjointness_of_bent_optical_waveguide_eigenvalue_problem" target="_blank" rel="noopener">PDF</a>
+              <button class="btn cite-btn" data-cite="jmaa">Cite</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">02</span>
+          <div>
+            <div class="title">Mathematical analysis of bent optical waveguide eigenvalue problem</div>
+            <div class="meta"><b>Rakesh Kumar</b> &amp; Kirankumar R. Hiremath — <i>Journal of Physics A: Mathematical and Theoretical</i>, 57(34) · 2024</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://iopscience.iop.org/article/10.1088/1751-8121/ad6aaf" target="_blank" rel="noopener">PDF</a>
+              <button class="btn cite-btn" data-cite="jpa">Cite</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">03</span>
+          <div>
+            <div class="title">A Primer on Eigenvalue Problems of Non-self-adjoint Operators</div>
+            <div class="meta"><b>Rakesh Kumar</b>, Kirankumar R. Hiremath &amp; Sergio Manzetti — <i>Analysis and Mathematical Physics</i>, Springer, 14(21) · 2024</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://link.springer.com/article/10.1007/s13324-024-00881-7" target="_blank" rel="noopener">PDF</a>
+              <button class="btn cite-btn" data-cite="primer">Cite</button>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">04</span>
+          <div>
+            <div class="title">Mathematical Modelling of a Ring Resonator Based Refractive Index Sensor for Cancer Detection Applications</div>
+            <div class="meta">S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal &amp; Kirankumar R. Hiremath — <i>Optical and Quantum Electronics</i> · 2023</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://link.springer.com/article/10.1007/s11082-023-05278-7" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">05</span>
+          <div>
+            <div class="title">CMT-based Fast Analytical Model of a Ring Resonator Refractive Index Biosensor</div>
+            <div class="meta">S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal &amp; Kirankumar R. Hiremath — <i>Optica Sensing Congress</i> · 2023</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://opg.optica.org/abstract.cfm?uri=Sensors-2023-STu5C.6" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">06</span>
+          <div>
+            <div class="title">Modeling and Enhancing the Sensing Performance of Silicon Nitride Slotted Ring Resonator based Refractive Index Sensor</div>
+            <div class="meta">S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal &amp; Kirankumar R. Hiremath — <i>Applied Optics</i>, Optica Publishing Group · 2025</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://opg.optica.org/ao/abstract.cfm?doi=10.1364/AO.563858" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">07</span>
+          <div>
+            <div class="title">Coupled mode theory-based analytical model of a ring resonator refractive index sensor incorporating bending loss and dispersion</div>
+            <div class="meta">S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal &amp; Kirankumar R. Hiremath — <i>Photonics and Nanostructures–Fundamentals and Applications</i>, 62, 101308 · 2024</div>
+            <div class="pub-actions">
+              <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S156944102400083X" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">08</span>
+          <div>
+            <div class="title">Unsteady free convection Williamson nano fluid over a heated permeable stretching sheet under the effects of inclined magnetic field and thermal radiation</div>
+            <div class="meta"><b>Rakesh Kumar</b>, Abhishek Nimmwat &amp; Kushal Sharma — <i>Physics of Fluids</i> · <span class="chip" style="background:var(--surface-2);color:var(--muted);">Submitted 2025</span></div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">09</span>
+          <div>
+            <div class="title">CMT based fast model of label-free disk resonator sensor for HSV detection</div>
+            <div class="meta">S. Kundal, <b>Rakesh Kumar</b>, Arpit A. Khandelwal &amp; Kirankumar R. Hiremath · <span class="chip" style="background:var(--surface-2);color:var(--muted);">Submitted 2025</span></div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">10</span>
+          <div>
+            <div class="title">Analysis and Computation of Turning Points in Optical Straight and Bent Waveguides</div>
+            <div class="meta"><b>Rakesh Kumar</b> — <i>Mathematics and Computers in Simulation</i>, Elsevier · 2025</div>
+          </div>
+        </li>
+        <li class="pub-full">
+          <span class="num">11</span>
+          <div>
+            <div class="title">Extended Inequalities Between Eigenvalues and Diagonal Entries of Hermitian Matrices and Block Hermitian Matrices</div>
+            <div class="meta">Manish Kumar, <b>Rakesh Kumar</b> &amp; Kushal Sharma — <i>Indian Journal of Pure and Applied Mathematics</i> · <span class="chip" style="background:var(--surface-2);color:var(--muted);">Submitted 2025</span></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <p id="noResults" style="display:none;color:var(--muted);padding-top:14px;">No publications match your search.</p>
+  </section>
+
+  <!-- ============ CONFERENCES ============ -->
+  <section id="conferences">
+    <h2 class="section-title">Conferences</h2>
+    <div class="card" style="padding:22px 24px;">
+      <ul class="timeline">
+        <li class="tl-item">
+          <div class="tl-date">8–10 August 2024</div>
+          <div class="tl-title">International Conference on Non-linear Analysis and Computational Techniques (ICNACT-2024)</div>
+          <div class="tl-place">India — <a href="https://vitbhopal.ac.in/icnact-2024/" target="_blank" rel="noopener">details</a></div>
+          <div class="tl-talk">Talk: Analysis and computations of turning points in bent optical waveguide model</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">3–7 June 2024</div>
+          <div class="tl-title">CIRM International Conference — Mathematical aspects of the physics with non-self-adjoint operators</div>
+          <div class="tl-place">Marseille, France — <a href="http://nsa.fjfi.cvut.cz/CIRM2024/" target="_blank" rel="noopener">details</a></div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">4–6 September 2023</div>
+          <div class="tl-title">Spectral Theory Workshop</div>
+          <div class="tl-place">School of Mathematics, University of Bristol, U.K. — <a href="https://heilbronn.ac.uk/2023/01/20/spectral-theory-workshop/" target="_blank" rel="noopener">details</a></div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">31 July – 4 August 2023</div>
+          <div class="tl-title">34th International Workshop on Operator Theory and its Applications (IWOTA)</div>
+          <div class="tl-place">University of Helsinki, Finland — <a href="https://www.helsinki.fi/en/conferences/iwota2023" target="_blank" rel="noopener">details</a></div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">19–23 June 2023</div>
+          <div class="tl-title">Mini-courses in Mathematical Analysis</div>
+          <div class="tl-place">Edificio Paolotti, Padova, Italy — <a href="https://events.math.unipd.it/minicorsi/" target="_blank" rel="noopener">details</a></div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">22 December 2022</div>
+          <div class="tl-title">National Symposium on Mathematics and Applications (NSMA)</div>
+          <div class="tl-place">IIT Madras, India — <a href="https://math.iitm.ac.in/public_html/nsma/index.php?name=Registration" target="_blank" rel="noopener">details</a></div>
+          <div class="tl-talk">Talk: Analysis of non-self-adjoint bent waveguide eigenvalue problem</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">15–17 December 2022</div>
+          <div class="tl-title">International Conference on Mathematical Analysis and Applications (ICMAA)</div>
+          <div class="tl-place">NIT Tiruchirappalli, India — <a href="https://www.nitt.edu/home/academics/departments/maths/events/icmaa2022/" target="_blank" rel="noopener">details</a></div>
+          <div class="tl-talk">Talk: Analysis of non-self-adjoint bent waveguide eigenvalue problem</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">10–15 July 2022</div>
+          <div class="tl-title">BIRS Workshop — Mathematical aspects of the physics with non-self-adjoint operators</div>
+          <div class="tl-place">Banff, Canada — <a href="https://www.birs.ca/events/2022/5-day-workshops/22w5115" target="_blank" rel="noopener">details</a></div>
+          <div class="tl-talk">Talk: Mathematical analysis of non-self-adjoint eigenvalue problem for the bent waveguides</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">6–24 June 2022</div>
+          <div class="tl-title">IIT Delhi Summer School on Optics and Photonics <span style="font-weight:400;color:var(--muted);">(with NASI, Delhi Chapter)</span></div>
+          <div class="tl-place">Optics and Photonics Centre, IIT Delhi, India — <a href="https://opc.iitd.ac.in/" target="_blank" rel="noopener">details</a></div>
+          <div class="tl-talk">Talk: Mathematical aspects of the bent waveguides</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">26–30 July 2021</div>
+          <div class="tl-title">Workshop on Perturbation of Spectral Bands and Gaps <span style="font-weight:400;color:var(--muted);">(virtual)</span></div>
+          <div class="tl-place">Technical University of Dortmund, Germany — <a href="https://www.mathematik.tu-dortmund.de/lsix/events/WPSG21/" target="_blank" rel="noopener">details</a></div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">16–20 August 2021</div>
+          <div class="tl-title">International Workshop on Operator Theory and its Applications (IWOTA) <span style="font-weight:400;color:var(--muted);">(virtual)</span></div>
+          <div class="tl-place">Lancaster University, U.K. — <a href="https://www.lancaster.ac.uk/maths/iwotauk2021/" target="_blank" rel="noopener">details</a></div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">25 September 2021</div>
+          <div class="tl-title">International Conference on Advanced Research in Applied Sciences <span style="font-weight:400;color:var(--muted);">(virtual)</span><span class="badge-mini badge-award">Best presentation</span></div>
+          <div class="tl-place">Kurukshetra University, India</div>
+        </li>
+        <li class="tl-item">
+          <div class="tl-date">12–15 October 2020</div>
+          <div class="tl-title">Advances in Differential Equations and Numerical Analysis (ADENA) <span style="font-weight:400;color:var(--muted);">(virtual)</span></div>
+          <div class="tl-place">IIT Guwahati, India — <a href="https://iitg.ac.in/maths/ext/adena2020/" target="_blank" rel="noopener">details</a></div>
+          <div class="tl-talk">Talk: Mathematical aspects of Non-self-adjoint bent waveguide problem</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section id="awards">
+    <h2 class="section-title">Awards</h2>
+    <div class="card" style="padding:6px 24px;">
+      <ul class="award-list">
+        <li><span class="yr">2023</span> International Travel Grant, SERB India — visit to IWOTA Workshop, Finland</li>
+        <li><span class="yr">2022</span> International Travel Grant, SERB India — visit to BIRS Workshop, Canada</li>
+        <li><span class="yr">2017</span> CSIR National Eligibility Test — June and December</li>
+        <li><span class="yr">2021</span> Best Presentation, International Conference on Advanced Research in Applied Sciences</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SOFTWARE ============ -->
+  <section id="software">
+    <h2 class="section-title">Software &amp; Tools</h2>
+    <div class="quad-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="quad-card card">
+        <h3><svg class="icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Projects &amp; repositories</h3>
+        <ul class="quad-list">
+          <li><a href="https://github.com/PredictiveIntelligenceLab/Physics-informed-DeepONets" target="_blank" rel="noopener">Physics-informed DeepONets</a><svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></li>
+          <li><a href="https://github.com/bitzhangcy/Neural-PDE-Solver?tab=readme-ov-file" target="_blank" rel="noopener">Neural PDE Solver</a><svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></li>
+        </ul>
+      </div>
+      <div class="quad-card card">
+        <h3><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>Languages &amp; environments</h3>
+        <div class="link-cluster">
+          <span class="chip" style="background:var(--surface-2);color:var(--text);">FreeFEM++</span>
+          <span class="chip" style="background:var(--surface-2);color:var(--text);">MATLAB</span>
+          <span class="chip" style="background:var(--surface-2);color:var(--text);">C++</span>
+          <span class="chip" style="background:var(--surface-2);color:var(--text);">Maple</span>
+          <span class="chip" style="background:var(--surface-2);color:var(--text);">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STUDENTS ============ -->
+  <section id="students">
+    <h2 class="section-title">Students</h2>
+    <div class="card" style="padding:20px 24px;">
+      <p style="margin:0;color:var(--muted);">Building out the research group — first student joining in 2026.</p>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <figure><img src="bentp.jpg" alt="Bent waveguide figure"><figcaption>bentp.jpg</figcaption></figure>
+      <figure><img src="bentcurve1.jpg" alt="Bent waveguide curve"><figcaption>bentcurve1.jpg</figcaption></figure>
+      <figure><img src="pseudo1.png" alt="Pseudospectrum plot"><figcaption>pseudo1.png</figcaption></figure>
+      <figure><img src="pseudo2.jpg" alt="Pseudospectrum plot"><figcaption>pseudo2.jpg</figcaption></figure>
+      <figure><a class="pdf-tile" href="TE1n.pdf" target="_blank" rel="noopener">TE1n.pdf ↗</a></figure>
+      <figure><a class="pdf-tile" href="TM1n.pdf" target="_blank" rel="noopener">TM1n.pdf ↗</a></figure>
+      <figure><img src="pseudo6.png" alt="Pseudospectrum plot"><figcaption>pseudo6.png</figcaption></figure>
+      <figure><img src="wavebent.jpg" alt="Bent wave figure"><figcaption>wavebent.jpg</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section id="resources">
+    <h2 class="section-title">Resources</h2>
+    <div class="card" style="padding:4px 24px;">
+      <details class="res">
+        <summary>Research collaborators</summary>
+        <div class="res-body">
+          <div class="link-cluster"><a href="https://nms.kcl.ac.uk/brian.davies/web_page/printmaster.pdf" target="_blank" rel="noopener">Collaborator profile (PDF) ↗</a></div>
+        </div>
+      </details>
+      <details class="res">
+        <summary>Important web links</summary>
+        <div class="res-body">
+          <div class="link-cluster">
+            <a href="https://spectraltheory.wordpress.com/conferences-on-spectral-theory/" target="_blank" rel="noopener">Spectral theory conferences (1)</a>
+            <a href="https://anadel.math.cnrs.fr/members/ioana/talks/" target="_blank" rel="noopener">Spectral theory conferences (2)</a>
+            <a href="https://maths-india.notion.site/" target="_blank" rel="noopener">Maths-India Google Group</a>
+            <a href="http://nsa.fjfi.cvut.cz/" target="_blank" rel="noopener">Non-self-adjoint operators — open problems</a>
+            <a href="https://sites.google.com/view/uk-st/members" target="_blank" rel="noopener">UK Spectral Theory Network</a>
+            <a href="https://conference-service.com/conferences/mathematics.html" target="_blank" rel="noopener">Conferences (1)</a>
+            <a href="http://www.mathnet.ru/php/conference.phtml?option_lang=eng" target="_blank" rel="noopener">Conferences (2)</a>
+            <a href="https://www.mathjobs.org/" target="_blank" rel="noopener">Math Jobs</a>
+            <a href="https://netlib.org/na-digest-html/" target="_blank" rel="noopener">NA-Digest</a>
+            <a href="https://mathhire.org/" target="_blank" rel="noopener">MathHire</a>
+            <a href="http://www.iamp.org/page.php?page=page_seminar" target="_blank" rel="noopener">IAMP</a>
+            <a href="https://researchseminars.org/" target="_blank" rel="noopener">Research Seminars</a>
+            <a href="https://drive.google.com/file/d/1d2In1IRCaJ3fSrDrONbdJyw-gAS8OmYV/view?usp=sharing" target="_blank" rel="noopener">Important booklet</a>
+            <a href="http://www.pdmi.ras.ru/EIMI/" target="_blank" rel="noopener">Euler International Mathematical Institute</a>
+            <a href="https://sites.google.com/view/lms-jrg-nsa/" target="_blank" rel="noopener">Challenge of Spectral Theory of NSA Operators</a>
+          </div>
+        </div>
+      </details>
+      <details class="res">
+        <summary>Millennium Problems</summary>
+        <div class="res-body">
+          <div class="link-cluster"><a href="https://www.cantorsparadise.com/the-riemann-hypothesis-explained-fa01c1f75d3f" target="_blank" rel="noopener">The Riemann Hypothesis</a></div>
+        </div>
+      </details>
+      <details class="res">
+        <summary>Blog &amp; reading</summary>
+        <div class="res-body">
+          <div class="link-cluster" style="margin-bottom:14px;">
+            <a href="https://unbiasedrakesh.blogspot.com/" target="_blank" rel="noopener">Let's Read</a>
+            <a href="https://www.imsc.res.in/~nbhm/qp/" target="_blank" rel="noopener">NBHM Question Papers</a>
+            <a href="https://wmich.edu/mathclub/files/GR0568.pdf" target="_blank" rel="noopener">GRE Math</a>
+            <a href="https://csclub.uwaterloo.ca/~pbarfuss/Paul%20R.%20Halmos%20-%20A%20Hilbert%20Space%20Problem%20Book%20(1982)%20%5B978-1-4684-9330-6%5D.pdf" target="_blank" rel="noopener">A Hilbert Space Problem Book</a>
+            <a href="https://planetmath.org/msc.html" target="_blank" rel="noopener">Planet Math</a>
+            <a href="https://pkalika.in/tag/csir-net-question-papers/" target="_blank" rel="noopener">CSIR question papers</a>
+          </div>
+          <p style="margin:0 0 8px;font-size:.8rem;">Jobs &amp; government links</p>
+          <div class="link-cluster">
+            <a href="https://employmentnews.gov.in/NewEmp/Home.aspx" target="_blank" rel="noopener">Employment News</a>
+            <a href="https://www.ncs.gov.in/" target="_blank" rel="noopener">NCS</a>
+            <a href="https://upsc.gov.in/" target="_blank" rel="noopener">UPSC</a>
+            <a href="https://academicjobsindia.com/lander" target="_blank" rel="noopener">Academic Jobs India</a>
+            <a href="http://nitcouncil.org.in/index.php/site/console/siteVisitNIT" target="_blank" rel="noopener">NIT Council</a>
+            <a href="https://www.ugc.gov.in/" target="_blank" rel="noopener">UGC</a>
+            <a href="https://www.sarkari-naukri.in/" target="_blank" rel="noopener">Sarkari Naukri</a>
+            <a href="https://pkalika.in/2023/04/26/csir-net-previous-yr-que-papers-collection/" target="_blank" rel="noopener">P Kalika</a>
+            <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noopener">National Digital Library of India</a>
+            <a href="https://curec.samarth.ac.in/index.php/search/site/index" target="_blank" rel="noopener">eGov</a>
+            <a href="https://www.iitsystem.ac.in/facultyrecruitment" target="_blank" rel="noopener">Council of IITs</a>
+            <a href="https://prism.serbonline.in/ResearchSupport" target="_blank" rel="noopener">SERB</a>
+          </div>
+        </div>
+      </details>
+      <details class="res">
+        <summary>Zero Waste Life</summary>
+        <div class="res-body">
+          <p>Started in June 2022, motivated by <a href="https://www.youtube.com/watch?v=pF72px2R3Hg&t=305s" target="_blank" rel="noopener">this video</a>. Zero waste doesn't mean giving up plastic entirely — it means not wasting food, water, light, paper, and other resources.</p>
+          <div class="link-cluster">
+            <a href="https://nng.544.myftpupload.com/tips/" target="_blank" rel="noopener">100 tips to get started</a>
+            <a href="https://pollybarks.com/blog/zero-waste-budget" target="_blank" rel="noopener">6 tips on a budget</a>
+            <a href="https://pollybarks.com/blog/ethical-alternatives-to-amazon" target="_blank" rel="noopener">Alternatives for online order packing</a>
+            <a href="https://www.youtube.com/watch?v=1TDC-Zud_uM" target="_blank" rel="noopener">How to reduce your waste</a>
+            <a href="http://www.papermanfoundation.org/product_page/" target="_blank" rel="noopener">Paperman Foundation (India)</a>
+          </div>
+        </div>
+      </details>
+      <details class="res">
+        <summary>Others</summary>
+        <div class="res-body">
+          <div class="link-cluster" style="margin-bottom:16px;">
+            <a href="https://www.youtube.com/watch?v=OyrvqOEwDMA" target="_blank" rel="noopener">Hillel Furstenberg — Why I went into mathematics</a>
+            <a href="https://www.youtube.com/watch?v=FH28a7v_gDQ" target="_blank" rel="noopener">Diana Davis — three-minute thesis dance</a>
+          </div>
+          <p class="quote">The best can come only from failures, patience, and repetition.</p>
+          <p class="quote">If you have learned the art of silence, there is nothing else that needs to be taught to you.</p>
+          <div class="link-cluster">
+            <a href="https://www.euraxess.cz/jobs/662429" target="_blank" rel="noopener">Postdoctoral opening (1)</a>
+            <a href="https://cordis.europa.eu/project/id/299919" target="_blank" rel="noopener">Postdoctoral opening (2)</a>
+            <a href="https://www.gimp.org/" target="_blank" rel="noopener">GIMP</a>
+            <a href="https://sites.google.com/view/vanny-doem/miscellaneous?authuser=0" target="_blank" rel="noopener">Vanny Deom</a>
+            <a href="https://scholartree.ca/" target="_blank" rel="noopener">Scholar Tree</a>
+            <a href="https://curiousmindmagazine.com/author/angelina/" target="_blank" rel="noopener">Curious Mind Magazine</a>
+            <a href="https://www.aicte-india.org/bureaus/rifd/Scholarship-Schemes" target="_blank" rel="noopener">AICTE — Scholarship Schemes</a>
+            <a href="https://mathigon.org/timeline" target="_blank" rel="noopener">Timeline of Mathematics</a>
+            <a href="https://www.youtube.com/watch?v=PlxWf493en4&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1" target="_blank" rel="noopener">A music break</a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Contact</h4>
+        <div class="f-line"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:rakeshkumar.r@srmap.edu.in">rakeshkumar.r@srmap.edu.in</a></div>
+        <div class="f-line"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:rakesh1729math@gmail.com">rakesh1729math@gmail.com</a></div>
+        <div class="f-line"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg><span>+91-7876986007</span></div>
+        <div class="f-line"><svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>SRM University-AP, Amaravati, Andhra Pradesh, India</span></div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
         <ul>
-            <li> 100 tips to get <a href="https://nng.544.myftpupload.com/tips/" target="_blank">
-                zero</a>
-                
-            <li> 6 actionable tips for going zero waste on a  <a href="https://pollybarks.com/blog/zero-waste-budget" target="_blank">
-                budget</a>
-        
-            <li> Alternates for online order <a href="https://pollybarks.com/blog/ethical-alternatives-to-amazon" target="_blank">
-                packing</a>
-            <li> How to reduce your waste? <a href="https://www.youtube.com/watch?v=1TDC-Zud_uM" target="_blank">
-                Nila Patty </a></li>
-            <li>In India <a href="http://www.papermanfoundation.org/product_page/" target="_blank">
-                Paperman </a></li> </li>
-                <li> How am I changing my daily life toward this? Update soon...</li>
-        </ul> 
+          <li><a href="https://scholar.google.com/citations?user=bOLISdkAAAAJ&hl=hi" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rakesh-Rishipal-2" target="_blank" rel="noopener">ResearchGate</a></li>
+          <li><a href="https://orcid.org/0000-0003-3172-4864" target="_blank" rel="noopener">ORCID</a></li>
+          <li><span class="mono" style="font-size:.85rem;">Vidwan-ID 575709</span></li>
+          <li><span class="mono" style="font-size:.85rem;">Scopus ID 58733289100</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social-row">
+          <a href="https://scholar.google.com/citations?user=bOLISdkAAAAJ&hl=hi" target="_blank" rel="noopener" aria-label="Google Scholar">G</a>
+          <a href="https://www.researchgate.net/profile/Rakesh-Rishipal-2" target="_blank" rel="noopener" aria-label="ResearchGate">RG</a>
+          <a href="https://orcid.org/0000-0003-3172-4864" target="_blank" rel="noopener" aria-label="ORCID">iD</a>
+        </div>
+      </div>
+      <div>
+        <h4>About this site</h4>
+        <p style="font-size:.85rem;color:#C9D6EA;margin:0;">Mathematics research homepage of Dr. R. K. Dhiman (Rakesh Kumar), Assistant Professor, Dept. of Mathematics, SRM University-AP.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Rakesh Kumar. Site maintained by the author.</span>
+      <span id="lastUpdated"></span>
+    </div>
+  </div>
+</footer>
 
-    <hr> 
-    <b>Others</b>
-        <ul>
-           <li>Prof. Hillel Furstenberg: Why I went into mathematics. <a href="https://www.youtube.com/watch?v=OyrvqOEwDMA" target="_blank">
-                video</a>.
-            <li>Dr. Diana Davis three minutes dance <a href="https://www.youtube.com/watch?v=FH28a7v_gDQ" target="_blank">
-                video</a> on her thesis. 
-        <li>    The best can come only from failures, patience, and repetition.</li>
-        <li>If you have learned the art of #Silence, there is nothing else that needs to be taught to you.</li>
-        </ul> <a href="https://www.euraxess.cz/jobs/662429" target="_blank"> Postdoctral-1</a>, <a href="https://cordis.europa.eu/project/id/299919" target="_blank"> Postdoctral-2</a>,
-         <a href="https://www.gimp.org/" target="_blank"> GIMP</a>,  <a href="https://sites.google.com/view/vanny-doem/miscellaneous?authuser=0" target="_blank"> Vanny Deom</a>,
-         <a href="https://scholartree.ca/" target="_blank"> Scholar Tree</a>,  <a href="https://curiousmindmagazine.com/author/angelina/" target="_blank"> Curious Mind Magazine</a>,
-         All India Council for Technical <a href="https://www.aicte-india.org/bureaus/rifd/Scholarship-Schemes" target="_blank"> Education</a>,
-          <a href="https://mathigon.org/timeline" target="_blank"> Timeline of Mathematics </a>
-    <hr> 
-<b>Gallery</b><br>
-<img src="bentp.jpg" alt="hi" width="200" height="180">   </img>
-<img src="bentcurve1.jpg" alt="hi" width="230" height="190">   </img>
-<img src="pseudo1.png" alt="hi" width="230" height="190">   </img>
-<img src="pseudo2.jpg" alt="hi" width="230" height="190">   </img>
-<img src="TE1n.pdf" alt="hi" width="230" height="190">   </img>
-<img src="TM1n.pdf" alt="hi" width="230" height="190">   </img>
-<img src="pseudo6.png" alt="hi" width="230" height="190">   </img>
-<img src="wavebent.jpg" alt="hi" width="230" height="190">   </img>
-<hr>
+<a href="#home" class="back-to-top" aria-label="Back to top">
+  <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</a>
 
-    <button> Update soon</button>
+<script>
+  // ---- theme toggle ----
+  (function(){
+    var root = document.documentElement;
+    var stored = localStorage.getItem('theme');
+    if(stored) root.setAttribute('data-theme', stored);
+    var sunPath = 'M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4M12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12z';
+    var moonPath = 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+    function paint(){
+      document.getElementById('themeIcon').innerHTML = '<path d="'+ (root.getAttribute('data-theme')==='dark' ? sunPath : moonPath) +'"/>';
+    }
+    paint();
+    document.getElementById('themeToggle').addEventListener('click', function(){
+      var isDark = root.getAttribute('data-theme') === 'dark';
+      if(isDark){ root.removeAttribute('data-theme'); localStorage.setItem('theme','light'); }
+      else{ root.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); }
+      paint();
+    });
+  })();
 
+  // ---- search toggle + filter ----
+  (function(){
+    var box = document.getElementById('searchBox');
+    var input = document.getElementById('searchInput');
+    document.getElementById('searchToggle').addEventListener('click', function(){
+      box.classList.toggle('open');
+      if(box.classList.contains('open')) input.focus();
+    });
+    var items = Array.prototype.slice.call(document.querySelectorAll('.pub-full'));
+    var noRes = document.getElementById('noResults');
+    input.addEventListener('input', function(){
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function(it){
+        var match = !q || it.textContent.toLowerCase().indexOf(q) !== -1;
+        it.classList.toggle('is-hidden', !match);
+        if(match) shown++;
+      });
+      noRes.style.display = (q && shown === 0) ? 'block' : 'none';
+      if(q) document.getElementById('publications').scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  })();
 
+  // ---- active nav link on scroll ----
+  (function(){
+    var links = document.querySelectorAll('nav.main-nav a');
+    var sections = Array.prototype.map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+    function onScroll(){
+      var pos = window.scrollY + 90;
+      var current = sections[0];
+      sections.forEach(function(sec){ if(sec && sec.offsetTop <= pos) current = sec; });
+      links.forEach(function(a){ a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id); });
+    }
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
 
-    <a href="https://www.youtube.com/watch?v=PlxWf493en4&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1" target="_blank"> **</a>
-    <hr>
-    <a href="#"> Go to top</a> || <a href="https://www.mpim-bonn.mpg.de/Karriere"> max</a> ||<a href="https://research.jhu.edu/rdt/funding-opportunities/postdoctoral/"> @</a>
-   </body>
+  // ---- citation copy ----
+  (function(){
+    var citations = {
+      jmaa: "Kumar, R. and Hiremath, K. R. (2022). Non-self-adjointness of bent optical waveguide eigenvalue problem. Journal of Mathematical Analysis and Applications, 512(1), 126024-126034.",
+      jpa: "Kumar, R. and Hiremath, K. R. (2024). Mathematical analysis of bent optical waveguide eigenvalue problem. Journal of Physics A: Mathematical and Theoretical, 57(34).",
+      primer: "Kumar, R., Hiremath, K. R. and Manzetti, S. (2024). A Primer on Eigenvalue Problems of Non-self-adjoint Operators. Analysis and Mathematical Physics, 14(21)."
+    };
+    document.querySelectorAll('.cite-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var text = citations[btn.getAttribute('data-cite')];
+        if(!text) return;
+        navigator.clipboard && navigator.clipboard.writeText(text).then(function(){
+          var old = btn.textContent; btn.textContent = 'Copied!';
+          setTimeout(function(){ btn.textContent = old; }, 1500);
+        });
+      });
+    });
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastUpdated').textContent = 'Last updated ' + new Date().toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'});
+</script>
+
+</body>
 </html>
-
